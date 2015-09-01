@@ -2,18 +2,35 @@ package models;
 
 import java.util.ArrayList;
 
-import interfaces.StorageItem;
-
 public class Customer {
+	ArrayList<StorageItem> items=new ArrayList<StorageItem>();
 	String name;
 	String surname;
 	
-	public Customer(String n, String l){
-		this.name=n;
-		this.surname=l;
-		
-		//A customer may have one or many boats, as well as one or many trailers....
-		ArrayList<StorageItem> items=new ArrayList<StorageItem>();
+	public void own(StorageItem item){
+		items.add(item);
+	}
+	
+	public StorageItem search(String id) throws Exception{
+		for (int i=0; i<items.size();i++){
+			if (items.get(i).getId().equals(id)){
+				return items.get(i);
+				
+			}
+		}
+		Exception e = new Exception();
+		throw e;
+	}
+	
+	public StorageItem get(String location) throws Exception{
+		for (int i=0; i<items.size();i++){
+			if(items.get(i).locate().equals(location)){
+				return items.get(i);
+			}
+			
+		}
+		Exception e= new Exception();
+		throw e;
 	}
 
 }
