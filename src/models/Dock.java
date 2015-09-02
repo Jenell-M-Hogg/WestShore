@@ -8,6 +8,7 @@ public class Dock implements StorageSpace {
 	int spaces;
 	
 	
+	
 	@Override
 	public boolean isEmpty() {
 		// TODO Auto-generated method stub

@@ -5,6 +5,7 @@ public class Trailer implements StorageItem {
 	String plate;
 	boolean hasLock=false;
 	String location;
+	String customer;
 	
 	
 	public String getPlate() {
@@ -36,8 +37,13 @@ public class Trailer implements StorageItem {
 
 	@Override
 	public void remove() {
-		// TODO Auto-generated method stub
+		
 		location=StorageItem.notStored;
+	}
+
+	@Override
+	public String locate() {
+		return location;
 	}
 
 }
