@@ -40,4 +40,9 @@ public class Dock implements StorageSpace {
 
 	}
 
+	public String getId() {
+		// TODO Auto-generated method stub
+		return this.id;
+	}
+
 }

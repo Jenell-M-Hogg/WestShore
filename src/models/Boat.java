@@ -11,6 +11,7 @@ public class Boat implements StorageItem {
 	private boolean isBilled = false;
 	private int length;
 	private int beam;
+	private String name;
 
 	public Boat(String id, String customer, String location) {
 		this.id = id;
@@ -103,6 +104,10 @@ public class Boat implements StorageItem {
 
 	public void setBeam(int beam) {
 		this.beam = beam;
+	}
+
+	public String getName() {
+		return this.name;
 	}
 
 
